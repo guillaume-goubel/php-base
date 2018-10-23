@@ -152,7 +152,6 @@ echo '<h2> 1.AFFICHER LES NOTES </h2> ';
                 echo $eleve['nom'] .' a eu la meilleure note qui est ' . $bestnote;
                 break; // on arrete la boucle
             }
-        
         }
     }
 

@@ -107,8 +107,9 @@
             <?php
 
     $timestamp= strtotime('now');
+    
     $day_choice2 = 25;
-    $mounth_choice2 = 'June';
+    $mounth_choice2 = 'December';
 
     switch ($mounth_choice2) {
         case 'January':
@@ -160,13 +161,13 @@
         break;
 }
 
-    $year_choice2 = 2019;
+    $year_choice2 = 2018;
     
     $time_date_futur = strtotime($day_choice2 .$mounth_choice2 .$year_choice2); 
     $sec = $time_date_futur - $timestamp;
 
     $min = $sec / 60;   
-    $heures = $sec / 3600; 
+    $heures = $min  / 60; 
     $jours = $heures / 24;
 
     echo "<p><strong> Il reste " .$sec ." secondes </strong></p>";
@@ -174,7 +175,16 @@
 
     $min1=round($min);
     $heures1=round($heures);
-    $jours1=round($jours);
+
+    $jours1 = round($jours);
+    echo($jours1);
+    $jours2 = $jours;
+
+
+
+
+
+
     ?>
 
             Vous pouvez convertir ce résultat en:
@@ -199,17 +209,17 @@ if (empty($_POST['rebour'])){
     $convertion = $_POST['rebour'];
     if ($convertion === 'minutes')  
     {
-        echo 'il reste' .$min1 .' minutes' ;
+        echo 'il reste ' .$min1 .' minutes' ;
     } 
       
     elseif ($convertion === 'heures')  
     {
-        echo 'il reste' .$heures1 .'heures' ;
+        echo 'il reste ' .$heures1 .'heures' ;
     } 
     
     elseif ($convertion === 'jours')   
     {
-        echo 'il reste' .$jours1 .'jours' ;
+        echo 'il reste ' .$jours1 .'jours' ;
     }
 
 }
